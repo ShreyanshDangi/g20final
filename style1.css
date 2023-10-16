@@ -1,0 +1,452 @@
+/*here I am giving effects to basic page */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  line-height: 1.4;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+h3 {
+  text-align: center;
+}
+ul {
+  text-align: center;
+}
+
+
+
+/*Here I am giving effects to the logo or the background i made in the starting*/
+.hero_section {
+  background-image: url(images/logo.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto; 
+}
+
+/*Here i am giving effects to the headdline part having tricolor shade in it*/
+.text_container {
+  color: black;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 64px;
+  padding-left: 16px;
+}
+
+.lg_text {
+  font-size: 72px;
+  font-weight: 400;
+}
+
+.black_box {
+  background: linear-gradient(to right, #ff8c00, #ffffff, #008000, #0000ff);
+  padding: 5px;
+}
+
+.black_box h2 {
+  font-size: 72px;
+  color: black;
+  text-align: center;
+  font-weight: 300;
+}
+
+.black_box h2 span {
+  font-weight: 400;
+}
+
+/*Here I am giving Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .black_box {
+    padding: 3px; 
+  }
+
+  .black_box h2 {
+    font-size: 48px; 
+    font-weight: 300
+  }
+}
+
+
+.aboutg20 p {
+  margin-left: 130px;
+  margin-right: 130px;
+}
+
+/*Here I am giving effects to the text or the paragrpah for the information section*/
+.heading {
+  text-align: center;
+  color: #191919;
+  font: 48px "Plus Jakarta Sans", sans-serif;
+  margin: 0px 0px 8px;
+  padding: 0px 0px 16px;
+  font-weight: 700;
+}
+
+
+
+p {
+  color: #000000;
+  font: 18px Lato, sans-serif;
+  padding: 0px 12px;
+  font-weight: 500;
+}
+
+
+
+/*Here I am giving Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 36px;
+    margin: 0px 0px 4px; 
+    padding: 0px 0px 8px; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 24px; 
+    margin: 0px 0px 2px; 
+    padding: 0px 0px 4px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 16px; 
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+}
+
+/*Here I am giving the effects to the part in which i am joining the map of the countries*/
+.flags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-left: 130px;
+  margin-right: 130px;
+}
+
+.flag {
+  flex: 0 1 calc(25% - 20px); 
+  max-width: calc(25% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.flag img {
+  width: 100%;
+  max-width: 160px;
+  /*width:160px*/
+  height: 90px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.flag p {
+  
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 110px;
+}
+
+
+
+/*Here I am giving Media query for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .flags {
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+  }
+
+  .flag {
+    flex-basis: calc(33.3% - 20px); 
+    max-width: calc(33.3% - 20px); 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .flags {
+    justify-content: center; 
+  }
+
+  .flag {
+    flex-basis: calc(50% - 20px); 
+    max-width: calc(50% - 20px);
+  }
+}
+
+
+/*this is the main section of my page in which i am making cards and hover things*/
+.work {
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+}
+.grid_item {
+  background-color: white;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.2);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  flex-direction: row;
+  position: relative;
+}
+.grid_item:last-child {
+  margin-right: 0;
+}
+.grid_item:hover {
+  transform: scale(1.04);
+  box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.4);
+  transition: 0.2s ease-in-out;
+}
+.card {
+  max-width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.image_container {
+  max-height: 200px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.card-link:hover {
+  color: inherit;
+}
+.card_content h3 {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+  white-space: normal;
+  height: auto;
+}
+
+/*Here I am giving Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); 
+    margin: 20px;
+  }
+
+  .grid_item {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr; 
+    margin: 20px;
+  }
+}
+
+/*Here i am giving the effects to the footer part......watched from other*/
+footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: black;
+}
+.main-content {
+  display: flex;
+}
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2 {
+  font-size: 1.125rem;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+  color: white;
+}
+.box .content:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+.main-content .box.left {
+  flex-basis: 40%;
+  padding: 10px 20px;
+}
+.main-content .box.center {
+  flex-basis: 30%;
+  padding: 10px 20px;
+}
+.main-content .box.right {
+  flex-basis: 30%;
+  padding: 10px 20px;
+}
+.left .content p {
+  color: white;
+  text-align: justify;
+}
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+.left .content .social a {
+  padding: 0 2px;
+}
+.left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover {
+  background: #f12020;
+}
+.center .content .fas {
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  color: white;
+}
+.center .content .fas:hover {
+  background: #f12020;
+}
+.center .content .text {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+  color: white;
+}
+.center .content .phone {
+  color: white;
+  margin: 15px 0;
+}
+.right form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: white;
+}
+.right form .msg {
+  margin-top: 10px;
+}
+.right form input,
+.right form textarea {
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+  color: white;
+}
+.right form input:focus,
+.right form textarea:focus {
+  outline-color: #3498db;
+}
+.right form input {
+  height: 35px;
+}
+.right form .btn {
+  margin-top: 10px;
+}
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f12020;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.right form .btn button:hover {
+  background: #000;
+}
+.bottom center {
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span {
+  color: white;
+}
+.bottom center a {
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box {
+    margin: 5px 0;
+  }
+}
